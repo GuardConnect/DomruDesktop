@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF><UseWindowsForms>true</UseWindowsForms><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><AssemblyName>DomruDesktop</AssemblyName><ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>x64</PlatformTarget><VlcWindowsX86Enabled>false</VlcWindowsX86Enabled><VlcWindowsX64Enabled>true</VlcWindowsX64Enabled><Version>0.1.30</Version>
+    <ApplicationIcon>Assets/app.ico</ApplicationIcon>
+    <!-- WPF owns DPI through app.manifest; WinForms is used only for the tray. -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Assets/AudioTests/*" Exclude="Assets/AudioTests/ringtone.wav" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/>
+    <EmbeddedResource Include="Assets/AudioTests/ringtone.wav" LogicalName="DomruDesktop.Audio.Ringtone.wav"/>
+    <Using Remove="System.Windows.Forms"/><Using Remove="System.Drawing"/><Using Include="System.IO"/><Using Include="System.Net.Http"/><Resource Include="Assets/app.ico"/><Resource Include="Assets/key-black.png"/>
+    <PackageReference Include="LibVLCSharp.WPF" Version="3.9.5" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.23" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+</Project>
+
+
+
+

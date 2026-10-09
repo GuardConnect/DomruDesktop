@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Domru.Desktop/Domru.Desktop.csproj" />
+  <Project Path="Domru.Probe/Domru.Probe.csproj" />
+  <Project Path="Domru.Tests/Domru.Tests.csproj" />
+</Solution>

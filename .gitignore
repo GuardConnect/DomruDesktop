@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+.private/
+artifacts/
+analysis/
+dump/
+tmp/
+tools/
+release/
+*.pdb
+*.log
+*.user
+.env
+.env.*
+*.dpapi
+Domru.Tests/crypto-vectors.json
